@@ -1,0 +1,41 @@
+Discente: Antônio Gabriel Leite Oliveira
+
+Atividade 1 - Programação web
+
+1. O que você entende por URL?
+
+R:URL é o endereço que identifica de forma única um recurso na internet, como uma página web, imagem ou vídeo. Ela especifica a localização do recurso e o protocolo utilizado para acessá-lo. Por exemplo: https://www.exemplo.com/pagina, https é o protocolo, www.exemplo.com é o domínio e /pagina é o caminho para o recurso específico.
+
+
+2. Muito do que se desenvolve para a internet é baseado no modelo cliente/servidor. Explique com
+suas palavras como esse tipo de aplicação funciona.
+
+R:No modelo cliente/servidor, o cliente envia solicitações de serviços ou recursos ao servidor, que processa essas solicitações e retorna as respostas apropriadas. Ao acessar um site, o navegador solicita a página ao servidor, que a envia de volta para ser exibida.
+
+3. Teste seus conhecimentos sobre internet (não somente aqueles aborda- dos durante a aula),
+respondendo V (para verdadeiro) ou F (para falso) no quiz a seguir:
+
+[ F] Um mecanismo de busca é responsável por distribuir endereços na internet.
+[ V] Navegadores web, como o MS Edge e o Google Chrome, podem ser usados para acessar
+servidores, através dos quais se pode fazer a leitura e o envio de e-mails, conhecidos como
+servidores de webmail.
+[V ] Um endereço IP é um número único que identifica cada dispositivo conectado à internet.
+[ F] A seguinte sequência de caracteres possui uma estrutura típica de URL de páginas da web
+brasileira: www.com.empresa.bra.
+[ V] A internet é uma ferramenta de utilização privada, sendo que o serviço principal de
+comunicação de dados está nos EUA.
+[ V] São exemplos de ferramentas que permitem que duas pessoas conversem em tempo real pela
+internet: WhatsApp, Instagram, Google Meet, Minecraft.
+[F ] Browser (ou navegador) é o software utilizado para iniciar a conexão do computador com a
+rede que dá acesso à internet.
+[F ] Um e-mail deve ser direcionado para uma única pessoa.
+[V ] Todo endereço começa com a palavra www que significa (World Wide Web – Rede de Alcance
+Mundial).
+[V ] Para acessar um recurso na internet (seja ele uma página ou um arquivo), precisamos do seu
+endereço: uma URL.
+[F ] Todas as pessoas que recebem um mesmo e-mail sempre conseguem saber quais outras
+pessoas também o receberam.
+[V ] O conteúdo dos materiais disponíveis na web pode ser interligado por links (ou hiperlinks).
+[F ] Fazer um download significa enviar um arquivo do seu computador para outro através da
+internet.
+[F ] O principal protocolo utilizado para navegar na internet é o FTP.
