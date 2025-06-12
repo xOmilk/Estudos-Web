@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -24,7 +24,7 @@ header {
 	background-color: #ccc;
 	border-radius: 10px;
 	margin: auto auto;
-	width: 80%;
+	width: 50%;
 	display: flex;
 	flex-flow: column wrap;
 	align-items: left;
@@ -46,21 +46,77 @@ header {
 .content label {
 	font-size: 14px;
 }
-.content input {
-	border-radius: 10px;
+
+select {
+	border-radius: 8px;
 	padding: 10px;
+	border: 2px solid #888;
+	background-color: #f5f5f5;
+	font-size: 16px;
+	color: #333;
+	width: 45% !important;
+	outline: none;
+	transition: border-color 0.2s;
+}
+select:focus {
+	border-color: #007bff;
+	background-color: #e6f0ff;
 }
 
-.send {
+input {
+	border-radius: 10px;
+	padding: 10px;
+
+	&[type="text"]:focus {
+		outline: none;
+		border-color: #007bff;
+		background-color: #e6f0ff;
+	}
+}
+
+.endereco {
+	margin: 0px;
+	display: flex;
+	flex-flow: column;
+
+	label {
+		margin-bottom: 10px;
+	}
+
+	.fields {
+		gap: 1rem;
+		display: flex;
+		* {
+			margin: 0px;
+		}
+	}
+}
+
+.botoes {
+	display: flex;
+	gap: 1rem;
+	.send {
+		background-color: green;
+		flex: auto;
+	}
+	.reset {
+		color: white;
+		background-color: #333;
+		flex: 50%;
+	}
+}
+
+input[type="submit"],
+input[type="reset"] {
 	border: none;
-	background-color: green;
 	cursor: pointer;
 	margin: auto auto;
 	width: 50%;
 	padding: 10px;
 	transition: all 0.3s;
 }
-.send:hover {
+input[type="submit"]:hover,
+input[type="reset"]:hover {
 	color: white;
 	opacity: 0.5;
 }

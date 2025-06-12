@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formStyles.css">
-    <title></title>
+    <title>Formulario</title>
 </head>
 
 <body>
@@ -21,18 +21,19 @@
             <form class="content" method="get" action="">
 
                 <label for="name">Digite o seu nome completo</label>
-                <input type="text" name="name" id="" placeholder="Informe o seu nome">
+                <input required type="text" name="name" id="" placeholder="Informe o seu nome">
 
                 <div style="margin: 5px 0px;">
-                    <p style="margin-bottom: 15px;">Informe o seu sexo</p>
+                    <label style="margin-bottom: 15px;display: block;">Informe o seu sexo</label>
                     <input id="mas" name="sexo" type="radio" value="masculino">
                     <label for="mas">Masculino</label>
                     <input id="fem" name="sexo" type="radio" value="feminino">
                     <label for="fem">Feminino</label>
                 </div>
 
-                <div>
-                    <p style="margin-bottom: 15px;">Marque quais disciplinas que possui afinidade</p>
+                <div style="margin: 0px;">
+                    <label style="margin-bottom: 15px;display: block;">Marque quais disciplinas que possui
+                        afinidade</label>
 
                     <input id="web" name="web" type="checkbox" value="web">
                     <label for="web">Web</label>
@@ -60,9 +61,34 @@
                     <option value="al">Alagoas</option>
                 </select>
 
+                <div style="margin: 5px 0px;">
+                    <label style="margin-bottom: 15px; display: block;">Estado civil</label>
+                    <input id="cas" name="civil" type="radio" value="casado">
+                    <label for="cas">Casado</label>
+                    <input id="div" name="civil" type="radio" value="divorciado">
+                    <label for="div">Divorciado</label>
+                    <input id="sol" name="civil" type="radio" value="solteiro">
+                    <label for="sol">Solteiro</label>
+                </div>
+
+                <div class="endereco">
+                    <label for="">Endereco</label>
+
+                    <div class="fields">
+                        <input required size="8" maxlength="8" type="number" placeholder="Informe o CEP">
+                        <input required type="number" placeholder="Numero casa">
+                    </div>
+
+                </div>
 
 
-                <input class="send" type="submit" value="Enviar">
+
+
+                <div class="botoes">
+                    <input class="reset" type="reset" value="Resetar">
+                    <input class="send" type="submit" value="Enviar">
+                </div>
+
             </form>
 
 
