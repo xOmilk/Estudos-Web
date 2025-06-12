@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2rem;
+
+	* {
+		letter-spacing: 1.5pt;
+	}
+}
+
+main {
+}
+
+footer {
+	display: flex;
+	flex-flow: column;
+	gap: 2rem;
+
+	h2 {
+		text-align: center;
+	}
+
+	.info {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 20px;
+
+		* {
+			display: inline !important;
+		}
+	}
+}
