@@ -9,10 +9,17 @@
 	justify-content: center;
 	align-items: center;
 }
-.image img{
+.image img {
 	border-radius: 10px;
 	width: 768px;
 	height: 348px;
+	border: 2px solid transparent;
+	transition: all 0.3s;
+}
+
+.image img:hover {
+	transform: scale(1.05);
+	border-color: blue;
 }
 
 body {
@@ -65,6 +72,12 @@ main {
 	display: flex;
 	flex-flow: column;
 	gap: 1rem;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.card:hover {
+	transform: scale(1.05);
 }
 
 .card ul {
