@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulario Sistema</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<form>
+				<div class="main-header">
+					<h2>Jorge Ramon</h2>
+				</div>
+
+				<div class="top-section">
+					<div class="form-details">
+						<div class="form-row">
+							<label for="first-name">First Name:</label>
+							<input type="text" id="first-name" value="Jorge" />
+						</div>
+						<div class="form-row">
+							<label for="last-name">Last Name:</label>
+							<input type="text" id="last-name" value="Ramon" />
+						</div>
+						<div class="form-row">
+							<label for="company">Company:</label>
+							<input
+								type="text"
+								id="company"
+								value="MiamiCoder"
+							/>
+						</div>
+						<div class="form-row">
+							<label for="title">Title:</label>
+							<input type="text" id="title" value="Mr" />
+						</div>
+					</div>
+					<div class="profile-picture">
+						<img
+							src="https://picsum.photos/150/150"
+							alt="Foto de Jorge Ramon"
+						/>
+						<button
+							style="margin-top: 10px"
+							type="button"
+							class="action-button"
+						>
+							Change Picture
+						</button>
+					</div>
+				</div>
+
+				<div class="form-section columns">
+					<div class="column">
+						<h3 class="section-title">Phone Numbers</h3>
+						<div class="form-row">
+							<label for="phone-home">Home:</label>
+							<input type="text" id="phone-home" />
+						</div>
+						<div class="form-row">
+							<label for="phone-business">Business:</label>
+							<input
+								type="text"
+								id="phone-business"
+								value="555 555-5555"
+							/>
+						</div>
+						<div class="form-row">
+							<label for="phone-mobile">Mobile:</label>
+							<input type="text" id="phone-mobile" />
+						</div>
+						<div class="form-row">
+							<label for="phone-fax">Fax:</label>
+							<input type="text" id="phone-fax" />
+						</div>
+					</div>
+					<div class="column">
+						<h3 class="section-title">Internet</h3>
+						<div class="form-row">
+							<label for="email">Email:</label>
+							<input
+								type="email"
+								id="email"
+								value="ramonj@miamicoder.com"
+							/>
+						</div>
+						<div class="form-row">
+							<label for="web-page">Web page:</label>
+							<input
+								type="url"
+								id="web-page"
+								value="http://www.miamicoder.com"
+							/>
+						</div>
+						<div class="form-row">
+							<label for="im">IM:</label>
+							<input type="text" id="im" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-section">
+					<h3 class="section-title">Addresses</h3>
+					<div class="columns">
+						<div class="column address-column">
+							<label class="address-label">Business</label>
+							<textarea rows="4"> </textarea>
+							<div class="radio-option">
+								<input
+									type="radio"
+									id="mailing-business"
+									name="mailing-address"
+									checked
+								/>
+								<label for="mailing-business"
+									>Mailing Address</label
+								>
+							</div>
+						</div>
+						<div class="column address-column">
+							<label class="address-label">Home</label>
+							<textarea rows="4"></textarea>
+							<div class="radio-option">
+								<input
+									type="radio"
+									id="mailing-home"
+									name="mailing-address"
+								/>
+								<label for="mailing-home"
+									>Mailing Address</label
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="reset" class="action-button">Cancel</button>
+					<button type="submit" class="action-button">Save</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
