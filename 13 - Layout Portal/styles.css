@@ -122,6 +122,7 @@ main section .hightlight {
 	right: 10px;
 	bottom: 10px;
 	border-bottom: 2px solid transparent;
+	transition: all 0.4s;
 }
 .readMore:hover {
 	cursor: pointer;
@@ -161,6 +162,7 @@ main section .bottom article {
 }
 
 .title {
+	font-weight: bolder;
 	padding: 10px 0;
 	border-bottom: 1px solid black;
 	display: flex;
