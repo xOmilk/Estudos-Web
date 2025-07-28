@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			try {
+				let value = parseFloat(prompt("Escreva um numero"));
+				if (isNaN(value)) {
+					throw new Error("Invalid number");
+				}
+
+				value % 2 === 0
+					? alert("O numero é par")
+					: alert("O numero não é par");
+			} catch (err) {
+				alert("O valor digitado não é um numero");
+			}
+		</script>
+	</body>
+</html>

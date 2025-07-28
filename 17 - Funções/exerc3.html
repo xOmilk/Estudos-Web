@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercício 3 - Função Máximo</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			input,
+			button {
+				padding: 10px;
+				margin: 5px;
+			}
+			#resultado {
+				margin-top: 20px;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Exercício 3</h1>
+
+		<div>
+			<label for="numeros">Digite os números separados por vírgula:</label
+			><br />
+			<input
+				type="text"
+				id="numeros"
+				placeholder="Ex: 5, 8, 5.6, 9.9"
+				style="width: 300px"
+			/>
+			<button onclick="calcularMaximo()">Encontrar Máximo</button>
+		</div>
+
+		<div id="resultado"></div>
+
+		<script>
+			function maximo(...numeros) {
+				if (numeros.length === 0) {
+					return undefined;
+				}
+
+				let maior = numeros[0];
+
+				for (let i = 1; i < numeros.length; i++) {
+					if (numeros[i] > maior) {
+						maior = numeros[i];
+					}
+				}
+				return maior;
+			}
+
+			function maximoArray(arrayNumeros) {
+				if (arrayNumeros.length === 0) {
+					return undefined;
+				}
+
+				let maior = arrayNumeros[0];
+
+				for (let i = 1; i < arrayNumeros.length; i++) {
+					if (arrayNumeros[i] > maior) {
+						maior = arrayNumeros[i];
+					}
+				}
+
+				return maior;
+			}
+
+			function calcularMaximo() {
+				let input = document.getElementById("numeros").value;
+				let resultado = document.getElementById("resultado");
+
+				if (input.trim() === "") {
+					resultado.innerHTML =
+						'<p style="color: red;">Por favor, digite alguns números.</p>';
+					return;
+				}
+
+				let numeros = input
+					.split(",")
+					.map((num) => parseFloat(num.trim()));
+
+				if (numeros.some((num) => isNaN(num))) {
+					resultado.innerHTML =
+						'<p style="color: red;">Por favor, digite apenas números válidos separados por vírgula.</p>';
+					return;
+				}
+
+				let max = maximoArray(numeros);
+
+				resultado.innerHTML = `
+                    <h3>Resultado:</h3>
+                    <p><strong>Números:</strong> [${numeros.join(", ")}]</p>
+                    <p><strong>Máximo:</strong> ${max}</p>
+                `;
+			}
+		</script>
+	</body>
+</html>

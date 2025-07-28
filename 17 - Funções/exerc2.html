@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			body {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+
+			input {
+				padding: 10px;
+                padding-left: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input
+				id="inputText"
+				type="number"
+				placeholder="Digite um numero"
+			/>
+			<button onclick="calcularFatorial()">Calcular fatorial</button>
+		</div>
+		<div>
+			<label for="result">Resultado</label>
+			<input id="result" type="text" disabled />
+		</div>
+		<script>
+			function calcularFatorial() {
+				let valueInput = document.querySelector("#inputText").value;
+				let result = document.querySelector("#result");
+
+				let num = parseInt(valueInput);
+				if (isNaN(num) || num < 0) {
+					result.value = "Digite um número válido (≥ 0)";
+					return;
+				}
+
+				let fatorial = 1;
+				for (let i = 1; i <= num; i++) {
+					fatorial *= i;
+				}
+
+				result.value = `${num}! = ${fatorial}`;
+			}
+		</script>
+	</body>
+</html>
