@@ -68,15 +68,12 @@
 		<div id="resultado"></div>
 
 		<script>
-			// Função multArray que multiplica todos os elementos de um array por um número
 			function multArray(array, multiplicador) {
-				// Verifica se o array é válido
 				if (!Array.isArray(array)) {
 					console.error("O primeiro parâmetro deve ser um array");
 					return null;
 				}
 
-				// Verifica se o multiplicador é um número
 				if (typeof multiplicador !== "number" || isNaN(multiplicador)) {
 					console.error(
 						"O segundo parâmetro deve ser um número válido"
@@ -84,7 +81,6 @@
 					return null;
 				}
 
-				// Cria um novo array com os valores multiplicados
 				let arrayMultiplicado = [];
 
 				for (let i = 0; i < array.length; i++) {
@@ -102,7 +98,6 @@
 				return arrayMultiplicado;
 			}
 
-			// Versão alternativa usando map (mais concisa)
 			function multArrayMap(array, multiplicador) {
 				if (!Array.isArray(array)) return null;
 				if (typeof multiplicador !== "number" || isNaN(multiplicador))
@@ -121,7 +116,6 @@
 					document.getElementById("multiplicador").value;
 				let resultado = document.getElementById("resultado");
 
-				// Validações de entrada
 				if (inputArray.trim() === "") {
 					resultado.innerHTML =
 						'<p style="color: red;">Por favor, digite os números do array.</p>';
@@ -134,7 +128,6 @@
 					return;
 				}
 
-				// Converter string em array de números
 				let array = inputArray.split(",").map((num) => {
 					let numero = parseFloat(num.trim());
 					return isNaN(numero) ? num.trim() : numero;
@@ -148,10 +141,8 @@
 					return;
 				}
 
-				// Executar a função
 				let arrayResultado = multArray(array, multiplicador);
 
-				// Exibir resultado
 				resultado.innerHTML = `
                     <h3>Resultado:</h3>
                     <p><strong>Array original:</strong> [${array.join(
