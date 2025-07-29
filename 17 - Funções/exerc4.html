@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercício 4 - Função multArray</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 700px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			input,
+			button {
+				padding: 10px;
+				margin: 5px;
+			}
+			#resultado {
+				margin-top: 20px;
+				padding: 15px;
+				background-color: #f0f0f0;
+				border-radius: 5px;
+			}
+			.exemplo {
+				background-color: #e6f3ff;
+				padding: 10px;
+				margin: 10px 0;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Exercício 4 - Função multArray</h1>
+
+		<p>
+			<strong>Objetivo:</strong> Criar uma função que multiplique todos os
+			números de um array por um número fornecido.
+		</p>
+
+		<div>
+			<label for="array"
+				>Digite os números do array (separados por vírgula):</label
+			><br />
+			<input
+				type="text"
+				id="array"
+				placeholder="Ex: 1, 2, 3, 4, 5"
+				style="width: 300px"
+			/>
+		</div>
+
+		<div>
+			<label for="multiplicador">Digite o número multiplicador:</label
+			><br />
+			<input
+				type="number"
+				id="multiplicador"
+				placeholder="Ex: 3"
+				style="width: 150px"
+			/>
+		</div>
+
+		<div>
+			<button onclick="executarMultArray()">Multiplicar Array</button>
+		</div>
+
+		<div id="resultado"></div>
+
+		<script>
+			// Função multArray que multiplica todos os elementos de um array por um número
+			function multArray(array, multiplicador) {
+				// Verifica se o array é válido
+				if (!Array.isArray(array)) {
+					console.error("O primeiro parâmetro deve ser um array");
+					return null;
+				}
+
+				// Verifica se o multiplicador é um número
+				if (typeof multiplicador !== "number" || isNaN(multiplicador)) {
+					console.error(
+						"O segundo parâmetro deve ser um número válido"
+					);
+					return null;
+				}
+
+				// Cria um novo array com os valores multiplicados
+				let arrayMultiplicado = [];
+
+				for (let i = 0; i < array.length; i++) {
+					// Verifica se o elemento atual é um número
+					if (typeof array[i] === "number" && !isNaN(array[i])) {
+						arrayMultiplicado.push(array[i] * multiplicador);
+					} else {
+						console.warn(
+							`Elemento na posição ${i} não é um número válido: ${array[i]}`
+						);
+						arrayMultiplicado.push(array[i]); // Mantém o valor original se não for número
+					}
+				}
+
+				return arrayMultiplicado;
+			}
+
+			// Versão alternativa usando map (mais concisa)
+			function multArrayMap(array, multiplicador) {
+				if (!Array.isArray(array)) return null;
+				if (typeof multiplicador !== "number" || isNaN(multiplicador))
+					return null;
+
+				return array.map((elemento) => {
+					return typeof elemento === "number" && !isNaN(elemento)
+						? elemento * multiplicador
+						: elemento;
+				});
+			}
+
+			function executarMultArray() {
+				let inputArray = document.getElementById("array").value;
+				let inputMultiplicador =
+					document.getElementById("multiplicador").value;
+				let resultado = document.getElementById("resultado");
+
+				// Validações de entrada
+				if (inputArray.trim() === "") {
+					resultado.innerHTML =
+						'<p style="color: red;">Por favor, digite os números do array.</p>';
+					return;
+				}
+
+				if (inputMultiplicador.trim() === "") {
+					resultado.innerHTML =
+						'<p style="color: red;">Por favor, digite o número multiplicador.</p>';
+					return;
+				}
+
+				// Converter string em array de números
+				let array = inputArray.split(",").map((num) => {
+					let numero = parseFloat(num.trim());
+					return isNaN(numero) ? num.trim() : numero;
+				});
+
+				let multiplicador = parseFloat(inputMultiplicador);
+
+				if (isNaN(multiplicador)) {
+					resultado.innerHTML =
+						'<p style="color: red;">O multiplicador deve ser um número válido.</p>';
+					return;
+				}
+
+				// Executar a função
+				let arrayResultado = multArray(array, multiplicador);
+
+				// Exibir resultado
+				resultado.innerHTML = `
+                    <h3>Resultado:</h3>
+                    <p><strong>Array original:</strong> [${array.join(
+						", "
+					)}]</p>
+                    <p><strong>Multiplicador:</strong> ${multiplicador}</p>
+                    <p><strong>Array multiplicado:</strong> [${arrayResultado.join(
+						", "
+					)}]</p>
+                `;
+			}
+		</script>
+	</body>
+</html>
