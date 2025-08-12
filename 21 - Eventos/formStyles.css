@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #f0f2f5;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	background-color: white;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 500px;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+header h2 {
+	color: #1c1e21;
+}
+
+header p {
+	color: #606770;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.campo {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.campo label {
+	font-weight: bold;
+	color: #4b4f56;
+}
+
+textarea {
+	padding: 10px;
+}
+
+.campo input,
+.campo select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #dddfe2;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+.campo input:focus,
+.campo.success textarea:focus,
+.campo select:focus {
+	outline: none;
+	border-color: #1877f2;
+	box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.campo.error input,
+.campo.success textarea,
+.campo.error select {
+	border-color: #e74c3c;
+}
+
+.campo.success input,
+.campo.success textarea,
+.campo.success select {
+	border-color: #2ecc71;
+}
+
+.error-message {
+	color: #e74c3c;
+	font-size: 12px;
+	display: none;
+}
+
+.campo.error .error-message {
+	display: block;
+}
+
+.mensagem textarea {
+	height: 120px;
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 12px;
+	background-color: #1877f2;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+	background-color: #166fe5;
+}
