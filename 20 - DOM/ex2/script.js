@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const emailInput = document.getElementById("email");
 	const cidadeInput = document.getElementById("cidade");
 	const ufSelect = document.getElementById("UF");
-	const cepInput = document.getElementById("CEP");
-	const casaInput = document.getElementById("casa");
+	const mensagem = document.getElementById("mensagem");
 
 	form.addEventListener("submit", function (e) {
 		e.preventDefault();
@@ -70,18 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			setSuccess(ufSelect);
 		}
 
-		if (cepInput.value.trim() === "") {
-			setError(cepInput, "O campo 'CEP' é obrigatório.");
+		if (mensagem.value.trim() === "") {
+			setError(mensagem, "O campo 'Mensagem' é obrigatório.");
+			mensagem.style.border = "1px solid red";
 			isFormValid = false;
 		} else {
-			setSuccess(cepInput);
-		}
-
-		if (casaInput.value.trim() === "") {
-			setError(casaInput, "O campo 'Número da casa' é obrigatório.");
-			isFormValid = false;
-		} else {
-			setSuccess(casaInput);
+			setSuccess(mensagem);
+			mensagem.style.border = "1px solid #2ecc71";
 		}
 
 		return isFormValid;
