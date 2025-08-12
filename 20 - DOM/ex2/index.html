@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="formStyles.css" />
+		<title>Formulario</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<h2>Secção de Cadastro</h2>
+				<p>Preencha as suas informações</p>
+			</header>
+
+			<div>
+				<form id="form" class="content" method="get" action="">
+					<div class="campo">
+						<label for="name">Digite o seu nome completo</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="Nome completo..."
+						/>
+						<small class="error-message"></small>
+					</div>
+
+					<div class="campo">
+						<label for="email">Digite o seu Email</label>
+						<input type="text" id="email" placeholder="Email..." />
+						<small class="error-message"></small>
+					</div>
+
+					<div class="campo">
+						<label for="cidade">Digite a sua Cidade</label>
+						<input
+							type="text"
+							id="cidade"
+							placeholder="Cidade..."
+						/>
+						<small class="error-message"></small>
+					</div>
+
+					<div class="campo">
+						<label for="UF">Informe o seu UF</label>
+						<select name="UF" id="UF" style="width: 50%">
+							<option selected disabled value="">
+								Seu estado
+							</option>
+							<option value="ba">Bahia</option>
+							<option value="se">Sergipe</option>
+							<option value="pe">Pernambuco</option>
+						</select>
+						<small class="error-message"></small>
+					</div>
+
+					<div class="campo">
+						<label for="CEP">Endereço</label>
+						<input type="text" id="CEP" placeholder="CEP..." />
+						<small class="error-message"></small>
+					</div>
+
+					<div class="campo">
+						<label for="casa">Número da casa</label>
+						<input type="text" id="casa" placeholder="Nº..." />
+						<small class="error-message"></small>
+					</div>
+
+					<button type="submit">Enviar</button>
+				</form>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
