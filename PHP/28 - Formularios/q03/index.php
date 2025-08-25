@@ -42,11 +42,11 @@
 
     <form method="GET">
         <label for="">1 Numero
-            <input name="number1" type="text" placeholder="Digite um numero">
+            <input required name="number1" type="text" placeholder="Digite um numero">
         </label>
 
         <label for="">2 Numero
-            <input name="number2" type="text" placeholder="Digite um numero">
+            <input required name="number2" type="text" placeholder="Digite um numero">
         </label>
 
         <button type="submit">Enviar</button>

@@ -36,16 +36,16 @@
     <form method="GET">
 
         <label for="">Nome
-            <input name="name" type="text" placeholder="Digite o seu nome">
+            <input required name="name" type="text" placeholder="Digite o seu nome">
         </label>
         <label for="">Data de nascimento
-            <input name="birthdate" type="date">
+            <input required name="birthdate" type="date">
         </label>
 
         <button type="submit">Enviar</button>
     </form>
 
-    <?php include_once './info.php' ?>
+    <?php include_once 'info.php' ?>
 
 
 </body>

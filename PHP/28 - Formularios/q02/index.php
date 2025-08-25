@@ -30,7 +30,7 @@
     <form method="get">
         <label for="age">
             Idade
-            <input name="age" id="age" type="text">
+            <input required name="age" id="age" type="text">
         </label>
         <button type="submit">Enviar</button>
     </form>
