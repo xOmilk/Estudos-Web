@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$form_data = $_SESSION['form_data'] ?? [];
+$form_errors = $_SESSION['form_errors'] ?? [];
+$form_success = $_SESSION['form_success'] ?? false;
+
+unset($_SESSION['form_errors'], $_SESSION['form_success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,23 +24,31 @@
 
     <div class="container">
         <h1>Formulário Em PHP (Validação)</h1>
-
-        <?php if ($sucesso): ?>
+        <?php if ($form_success): ?>
             <div class="sucesso">
                 <strong>Sucesso!</strong> Formulário enviado com sucesso!<br>
                 <strong>Dados recebidos:</strong><br>
-                Nome: <?php echo $nome; ?><br>
-                Email: <?php echo $email; ?><br>
-                Data de Nascimento: <?php echo $data_nascimento; ?><br>
-                Telefone: <?php echo $telefone; ?><br>
-                Login: <?php echo $login; ?><br>
-                CEP: <?php echo $cep; ?><br>
-                Endereço: <?php echo $endereco; ?><br>
-                CPF: <?php echo $cpf; ?>
+                Nome: <?php echo htmlspecialchars($form_data['nome'] ?? ''); ?><br>
+                Email: <?php echo htmlspecialchars($form_data['email'] ?? ''); ?><br>
+                Data de Nascimento: <?php echo htmlspecialchars($form_data['data_nascimento'] ?? ''); ?><br>
+                Telefone: <?php echo htmlspecialchars($form_data['telefone'] ?? ''); ?><br>
+                Login: <?php echo htmlspecialchars($form_data['login'] ?? ''); ?><br>
+                CEP: <?php echo htmlspecialchars($form_data['cep'] ?? ''); ?><br>
+                Endereço: <?php echo htmlspecialchars($form_data['endereco'] ?? ''); ?><br>
+                CPF: <?php echo htmlspecialchars($form_data['cpf'] ?? ''); ?>
             </div>
         <?php endif; ?>
 
-        <form action="./formulario.php" method="POST">
+        <?php if (!empty($form_errors)): ?>
+            <div class="erro">
+                <strong>Erros encontrados:</strong><br>
+                <?php foreach ($form_errors as $erro): ?>
+                    • <?php echo htmlspecialchars($erro); ?><br>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+        <form action="./verifica.php" method="POST">
 
             <div class="form-group">
                 <label for="nome">Nome:</label>
