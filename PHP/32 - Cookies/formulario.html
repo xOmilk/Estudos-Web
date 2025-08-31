@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			.container form {
+				padding: 30px;
+				border-radius: 10px;
+				margin: 0 auto;
+				width: 40%;
+				background-color: #cccc;
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+			}
+			.field {
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				gap: 10px;
+			}
+			.field input {
+				padding: 8px;
+				border-radius: 8px;
+			}
+			.field button {
+				border-radius: 8px;
+				background-color: lightblue;
+				padding: 10px;
+				transition: all 0.3s;
+			}
+			.field button:hover {
+				color: white;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<form action="./criacookies.php" method="get">
+				<div class="field">
+					<label for="nome">Nome</label>
+					<input
+						type="text"
+						name="nome"
+						id="nome"
+						placeholder="Informe o seu Nome"
+					/>
+				</div>
+
+				<div class="field">
+					<label for="cidade">Cidade</label>
+					<input
+						type="text"
+						placeholder="Informe uma cidade"
+						name="cidade"
+						id="cidade"
+					/>
+				</div>
+				<div class="field">
+					<button type="submit">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
