@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +19,7 @@
         </header>
 
         <main>
-            <form action="./src/php/" method="post">
+            <form action="./src/php/control.php" method="post">
 
                 <div class="fields-group">
                     <div class="field-row">
@@ -47,6 +51,22 @@
 
                     <div class="field-row">
                         <div id="feedback">
+                            <?php
+                            if (isset($_SESSION['sucess'])) {
+                                echo '<script>
+                                    document.querySelector("#feedback").textContent = "' . $_SESSION['sucess'] . '";
+                                </script>';
+                                unset($_SESSION['sucess']);
+                            } else {
+                                if (isset($_SESSION['error'])) {
+                                    echo
+                                    '<script>
+                                        document.querySelector("#feedback").textContent = "' . $_SESSION['error'] . '";
+                                    </script>';
+                                    unset($_SESSION['error']);
+                                }
+                            }
+                            ?>
                         </div>
                         <div class="buttons">
                             <button
