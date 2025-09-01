@@ -73,3 +73,25 @@ header {
 	border-radius: 5px;
 	padding: 8px;
 }
+
+.buttons button:disabled {
+	border: 1px solid red;
+}
+
+#feedback {
+	border-radius: 8px;
+	padding: 10px;
+	border: 1px solid black;
+	width: 40% !important;
+	max-height: 100px;
+}
+#feedback p {
+	padding: 10px;
+}
+
+.noClick {
+	cursor: not-allowed;
+}
+.field-error {
+	margin: 0px;
+}

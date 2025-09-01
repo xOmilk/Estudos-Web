@@ -23,7 +23,7 @@
                         <input
                             id="destiny"
                             name="destiny"
-                            type="text"
+                            type="email"
                             placeholder="Email de destino">
                     </div>
 
@@ -46,6 +46,8 @@
                     </div>
 
                     <div class="field-row">
+                        <div id="feedback">
+                        </div>
                         <div class="buttons">
                             <button
                                 class="reset"
